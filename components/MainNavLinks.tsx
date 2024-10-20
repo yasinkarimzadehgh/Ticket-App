@@ -11,7 +11,6 @@ function MainNavLinks() {
   ];
 
   const currentPath = usePathname();
-  console.log(currentPath);
 
   return (
     <div className="flex items-center gap-2">
