@@ -3,7 +3,7 @@ import React from "react";
 import ToggleMode from "./ToggleMode";
 import MainNavLinks from "./MainNavLinks";
 
-const MainNav = () => {
+function MainNav() {
   return (
     <div className="flex justify-between">
       <MainNavLinks />
@@ -14,6 +14,6 @@ const MainNav = () => {
       </div>
     </div>
   );
-};
+}
 
 export default MainNav;
