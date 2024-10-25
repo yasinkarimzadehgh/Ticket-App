@@ -8,7 +8,7 @@ function MainNav() {
     <div className="flex justify-between">
       <MainNavLinks />
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-3">
         <Link href="/">Logout</Link>
         <ToggleMode />
       </div>
