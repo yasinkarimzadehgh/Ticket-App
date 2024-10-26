@@ -1,3 +1,5 @@
+import React from "react";
+import { Ticket } from "@prisma/client";
 import TicketStatusBadge from "@/components/TicketStatusBadge";
 import {
   Table,
@@ -7,8 +9,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Ticket } from "@prisma/client";
-import React from "react";
 
 interface Props {
   tickets: Ticket[];
