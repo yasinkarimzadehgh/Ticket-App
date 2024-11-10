@@ -9,6 +9,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import TicketPriority from "@/components/TicketPriority";
 
 interface Props {
   tickets: Ticket[];
@@ -25,7 +26,9 @@ function DataTable({ tickets }: Props) {
               <TableHead>
                 <div className="flex justify-center">Status</div>
               </TableHead>
-              <TableHead>Priority</TableHead>
+              <TableHead>
+                <div className="flex justify-center">Priority</div>
+              </TableHead>
               <TableHead>Created At</TableHead>
             </TableRow>
           </TableHeader>
@@ -39,7 +42,11 @@ function DataTable({ tickets }: Props) {
                         <TicketStatusBadge status={ticket.status} />
                       </div>
                     </TableCell>
-                    <TableCell>{ticket.priority}</TableCell>
+                    <TableCell>
+                      <div className="flex justify-center">
+                        <TicketPriority priority={ticket.priority} />
+                      </div>
+                    </TableCell>
                     <TableCell>
                       {ticket.createdAt.toLocaleDateString("en-US", {
                         year: "2-digit",

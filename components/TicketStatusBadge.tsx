@@ -10,9 +10,9 @@ const statusMap: Record<
   Status,
   { label: string; color: "bg-red-400" | "bg-blue-400" | "bg-green-400" }
 > = {
-  OPEN: { label: "Open", color: "bg-red-400" },
+  OPEN: { label: "Open", color: "bg-green-400" },
   STARTED: { label: "Started", color: "bg-blue-400" },
-  CLOSED: { label: "Closed", color: "bg-green-400" },
+  CLOSED: { label: "Closed", color: "bg-red-400" },
 };
 
 function TicketStatusBadge({ status }: Props) {
