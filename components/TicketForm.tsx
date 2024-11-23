@@ -17,6 +17,14 @@ import {
 } from "./ui/select";
 
 type TicketFormData = z.infer<typeof ticketSchema>;
+// equivalent to manually writing this type:
+// type TicketFormData = {
+//   title: string;
+//   description: string;
+//   priority: 'LOW' | 'MEDIUM' | 'HIGH';
+//   status: 'OPEN' | 'IN_PROGRESS' | 'CLOSED';
+//   dueDate?: Date;
+// }
 
 function TicketForm() {
   const form = useForm<TicketFormData>({
@@ -34,6 +42,7 @@ function TicketForm() {
           onSubmit={form.handleSubmit(onsubmit)}
           className="space-y-8 w-full"
         >
+          {/*  Input Field */}
           <FormField
             control={form.control}
             name="title"
@@ -46,6 +55,7 @@ function TicketForm() {
               </FormItem>
             )}
           />
+          {/* Markdown Editor */}
           <Controller
             name="description"
             control={form.control}
@@ -53,6 +63,7 @@ function TicketForm() {
               <SimpleMDE placeholder="Description" {...field} />
             )}
           />
+          {/* Select Fields (Status and Priority): */}
           <div className="flex w-full space-x-4">
             <FormField
               control={form.control}
