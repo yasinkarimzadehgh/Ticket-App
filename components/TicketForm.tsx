@@ -15,6 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
+import { Button } from "./ui/button";
 
 type TicketFormData = z.infer<typeof ticketSchema>;
 // equivalent to manually writing this type:
@@ -114,6 +115,7 @@ function TicketForm() {
               )}
             />
           </div>
+          <Button type="submit">Submit</Button>
         </form>
       </Form>
     </div>
