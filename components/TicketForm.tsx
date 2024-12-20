@@ -90,6 +90,7 @@ function TicketForm({ ticket }: Props) {
             <FormField
               control={form.control}
               name="status"
+              defaultValue={ticket?.status}
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Status</FormLabel>
@@ -99,10 +100,7 @@ function TicketForm({ ticket }: Props) {
                   >
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue
-                          placeholder="Status..."
-                          defaultValue={ticket?.status}
-                        />
+                        <SelectValue placeholder="Status..." />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
@@ -117,6 +115,7 @@ function TicketForm({ ticket }: Props) {
             <FormField
               control={form.control}
               name="priority"
+              defaultValue={ticket?.priority}
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Priority</FormLabel>
@@ -126,10 +125,7 @@ function TicketForm({ ticket }: Props) {
                   >
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue
-                          placeholder="Priority..."
-                          defaultValue={ticket?.priority}
-                        />
+                        <SelectValue placeholder="Priority..." />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
